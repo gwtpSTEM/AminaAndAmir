@@ -78,7 +78,7 @@ export default ({ data }) => (
   </Helmet>
   <Layout>
     <Container className="my-5" >
-    <Tab.Container id="left-tabs" defaultActiveKey="first">
+    <Tab.Container id="left-tabs" defaultActiveKey="book">
       <Row>
         <Col md={3}>
           <Nav variant="pills" className="flex-column font-weight-bold">
@@ -86,7 +86,7 @@ export default ({ data }) => (
               <Nav.Link eventKey="book"><span className="fas fa-book mr-2"></span>About the Book</Nav.Link>
             </Nav.Item>
             <Nav.Item className="mb-2">
-              <Nav.Link eventKey="author"><span className="fas fa-book mr-2"></span>About the Author</Nav.Link>
+              <Nav.Link eventKey="author"><span className="fas fa-pen-nib mr-2"></span>About the Author</Nav.Link>
             </Nav.Item>
             <Nav.Item className="mb-2">
               <Nav.Link eventKey="second"><span className="fas fa-hands-wash mr-2"></span>5 Healthy Habits</Nav.Link>

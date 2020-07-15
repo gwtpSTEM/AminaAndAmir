@@ -49,11 +49,37 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/static/*": [
+            "cache-control: public, max-age=31536000, immutable",
+          ],
+          "/src/styles/*": [
+            "cache-control: public, max-age=31536000, immutable",
+          ],
+          "/src/img/*": [
+            "cache-control: public, max-age=31536000, immutable",
+          ],
+          "/src/pages/*": [
+            "cache-control: public, max-age=0, must-revalidate",
+          ],
+          "/src/components/*": [
+            "cache-control: public, max-age=0, must-revalidate",
+          ],
+          "/public/page-data/*": [
+            "cache-control: public, max-age=0, must-revalidate",
+          ],
+        },
       },
     },
     `gatsby-plugin-sharp`,
