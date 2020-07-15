@@ -827,11 +827,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bigheads/core@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@bigheads/core/-/core-0.2.0.tgz#b4c96b87330c1987254c2c1e927c9fd038d5b577"
-  integrity sha512-3PDVlLHKka1+Rjyle7m3tz4YOz4NMm5eGcU/fO56/Rjz5vmurG1WBYdpQ+AD/Wddxc1awWswT7FLQVQEdvtv0Q==
-
 "@emotion/is-prop-valid@^0.8.2":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
