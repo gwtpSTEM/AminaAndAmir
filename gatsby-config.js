@@ -1,6 +1,9 @@
 require('dotenv').config();
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.AminaAndAmir.com`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -15,6 +18,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     'gatsby-plugin-dark-mode',
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-airtable`,
       options: {
@@ -77,6 +81,9 @@ module.exports = {
             "cache-control: public, max-age=0, must-revalidate",
           ],
           "/public/page-data/*": [
+            "cache-control: public, max-age=0, must-revalidate",
+          ],
+          "/sw.js": [
             "cache-control: public, max-age=0, must-revalidate",
           ],
         },
