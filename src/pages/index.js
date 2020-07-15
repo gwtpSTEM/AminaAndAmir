@@ -84,7 +84,10 @@ export default ({ data }) => (
         <Col md={3}>
           <Nav variant="pills" className="flex-column font-weight-bold">
             <Nav.Item className="mb-2">
-              <Nav.Link eventKey="first"><span className="fas fa-book mr-2"></span>About the Book</Nav.Link>
+              <Nav.Link eventKey="book"><span className="fas fa-book mr-2"></span>About the Book</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="mb-2">
+              <Nav.Link eventKey="author"><span className="fas fa-book mr-2"></span>About the Author</Nav.Link>
             </Nav.Item>
             <Nav.Item className="mb-2">
               <Nav.Link eventKey="second"><span className="fas fa-hands-wash mr-2"></span>5 Healthy Habits</Nav.Link>
@@ -102,10 +105,13 @@ export default ({ data }) => (
         </Col>
         <Col md={9}>
           <Tab.Content>
-            <Tab.Pane eventKey="first">
-            <p className="mt-3 mt-md-0">Nunc blandit efficitur sodales. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent egestas feugiat dui, nec posuere nulla lobortis at. Maecenas diam tellus, pulvinar in ornare at, bibendum at ligula. Ut dictum odio nec scelerisque finibus. Nunc iaculis posuere elit, sed ultricies lacus varius scelerisque. Fusce ornare metus accumsan augue pellentesque vulputate. Duis suscipit lacus id est vehicula laoreet. In dignissim, ex posuere eleifend consectetur, tortor nibh suscipit nibh, vel porta eros lacus quis massa. Cras et nibh vel purus suscipit tristique. Integer facilisis erat non orci dapibus vehicula. Aenean pretium, sapien ac commodo feugiat, quam mauris facilisis nunc, vitae tincidunt nisi lectus sit amet sem. Donec felis diam, condimentum sagittis nunc nec, efficitur commodo justo. Mauris nec diam nibh. Morbi mollis hendrerit urna, in pulvinar orci venenatis a. Nam quis ultrices nisl, vel mollis lectus.</p>
+            <Tab.Pane eventKey="book">
+            <p className="mt-3 mt-md-0">If you find it difficult to talk to your child about COVID-19, then this book is for you. Join Amina, Amir, and their little sister Anissa on an awesome, STEM-based adventure that is jam-packed with laughter and loads of fun.</p>
             <p className="h3">Characters</p>
             <p>Maybe?</p>
+            </Tab.Pane>
+            <Tab.Pane eventKey="author">
+            <p className="mt-3 mt-md-0">Jason Williams aka Professor STEM is the founder of Get with the Program, Inc., which is the number one, youth-STEM organization this side of the Milky Way. As a father of three African American and Japanese children, Jason grew frustrated with the lack of representation in children&rsquo;s STEM and STEM-related literature. However, being solution-focused, he formed a publishing company, BrainEngine, and wrote his first children&rsquo;s book. The Awesome Adventures of Amina and Amir, is a book series, based on his kids and their exploration through the STEM multiverse. Currently, Jason enjoys being near bodies of water, spur of the moment road trips, and looking at mansions. He&rsquo;s also learning how to code.</p>
             </Tab.Pane>
             <Tab.Pane eventKey="second">
             <p className="mt-3 mt-md-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a magna elit. Nullam justo sem, pretium et pulvinar ac, ullamcorper nec ipsum. Nullam libero ligula, mollis nec sodales eget, semper sed dolor. Nam luctus ipsum nulla, a tristique sem ullamcorper sit amet. In sed congue nulla, sodales fermentum est. Sed vel nulla finibus sapien convallis volutpat. Suspendisse eget ex libero. Maecenas sit amet libero ante.</p>
