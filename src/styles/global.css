@@ -1,0 +1,92 @@
+/* Light and Dark Modes */
+body {
+    --bg: #E4E4FF;
+    --textNormal: #222;
+    --yellow: #FFD301;
+    --navItem: var(--dark);
+    --navHover: rgba(52, 58, 64, 0.88);
+    --storyModal: var(--dark);
+  
+    background-color: var(--bg);
+    color: var(--textNormal);
+    font-size: 1.1em;
+
+    transition: all 0.25s linear;
+}
+  
+body.dark {
+    -webkit-font-smoothing: antialiased;
+  
+    --bg: #424284;
+    --textNormal: rgba(255, 255, 255, 1);
+    --navItem: #fff;
+    --navHover: rgba(255, 255, 255, 0.88);
+
+    transition: all 0.25s linear;
+}
+
+/* dark mode toggler */
+
+.toggle-switch {
+    font-size: 150%;
+}
+
+.toggle-switch:after {
+    content: "🌚";
+}
+
+.dark .toggle-switch:after {
+    content: "🌞";
+}
+
+.checkbox {
+    display: none;
+}
+
+.read-button {
+    background-color: var(--yellow) !important;
+    color: var(--dark) !important;
+    border: none;
+}
+
+.read-button:hover {
+    background-color: var(--yellow) !important;
+    color: rgba(52, 58, 64, 0.88) !important;
+}
+
+.nav-item .active {
+    background-color: var(--yellow) !important;
+    color: var(--dark) !important;
+}
+
+.nav-item .active:hover {
+    background-color: var(--yellow) !important;
+    color: rgba(52, 58, 64, 0.88) !important;
+}
+
+.nav-link {
+    color: var(--navItem) !important;
+}
+
+.nav-link:hover {
+    color: var(--navHover) !important;
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+    color: #222;
+}
+
+body {
+    font-family: 'Quicksand', 'M PLUS Rounded 1c', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .btn {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+.story {
+    color: var(--storyModal);
+}
+
