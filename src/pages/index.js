@@ -10,7 +10,6 @@ import Nav from 'react-bootstrap/Nav'
 import { graphql } from 'gatsby'
 import Img from "gatsby-image"
 import Layout from "../components/layout"
-import { motion } from "framer-motion"
 import { Helmet } from "react-helmet"
 
 function Panel(props) {
@@ -130,10 +129,6 @@ export default ({ data }) => (
             <Row className="mt-3">
             {data.stories.nodes.map(node => (
               <Col md={6} lg={4} key={node.recordId}>
-              <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              >
               <Card className="mb-4">
                 <Img variant="top" fluid={node.data.photo.localFiles[0].childImageSharp.fluid} className="card-img" />
                 <Card.Body>
@@ -154,7 +149,6 @@ export default ({ data }) => (
                   </Card.Text>
                 </Card.Body>
               </Card>
-              </motion.div>
               </Col>
             ))}
             </Row>
