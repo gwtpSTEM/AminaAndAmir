@@ -18,7 +18,12 @@ module.exports = {
     `gatsby-transformer-remark`,
     'gatsby-plugin-dark-mode',
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/temp`],
+      }
+    },
     {
       resolve: `gatsby-source-airtable`,
       options: {
@@ -36,6 +41,14 @@ module.exports = {
           {
             baseId: `apppHWVPYSIawMUY0`,
             tableName: `Videos`,
+          },
+          {
+            baseId: `apppHWVPYSIawMUY0`,
+            tableName: `Activities`,
+            mapping: {
+              'image': 'fileNode',
+              'file': 'fileNode',
+            }
           },
         ]
       }
@@ -91,5 +104,14 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-172924165-1",
+        head: false,
+        exclude: ["/404"],
+        pageTransitionDelay: 0,
+      },
+    },
   ],
 }

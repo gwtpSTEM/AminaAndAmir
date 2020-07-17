@@ -33,7 +33,7 @@ export default () => (
                 <div className="flex-column font-weight-bold">
                     <p className="mt-3">2020 &copy; Jason Williams</p>
                     <p className="pt-3 border-top border-dark mb-0">Illustrations by Daniel Gregus</p>
-                    <p>Website designed and developed by Arisa Williams</p>
+                    <p>Website by Arisa Williams</p>
                 </div>
             </Col>
         </Row>

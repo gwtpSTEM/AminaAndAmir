@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import { graphql, StaticQuery } from 'gatsby';
 import Img from "gatsby-image"
 import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 class DarkMode extends React.Component {
     render() {
@@ -17,7 +18,8 @@ class DarkMode extends React.Component {
                 checked={theme === 'dark'}
                               className="checkbox"
               />{' '}
-              <span className="toggle-switch"></span>
+              {/* <span className="toggle-switch"></span> */}
+              <span className="alt-toggle"></span>
             </label>
           )}
         </ThemeToggler>
@@ -39,13 +41,20 @@ export default () => (
       }
     `}
   render={data => (
-    <div style={{ marginBottom: `70px` }}>
+    <div>
     <div className="my-3">
       <Container>
-      <div className="text-right"><DarkMode /></div>
+      <Row className="justify-content-between justify-content-lg-end">
+      <Col xs={4} className="d-lg-none">
+      <Img fluid={data.title.childImageSharp.fluid} />
+      </Col>
+      <Col xs={5} className="text-right">
+      <DarkMode />
+      </Col>
+      </Row>
       </Container>
     </div>
-    <Container>
+    <Container className="d-none d-lg-block">
       <Col lg={8} className="mx-auto">
       <Img fluid={data.title.childImageSharp.fluid} />
       </Col>

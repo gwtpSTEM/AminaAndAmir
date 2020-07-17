@@ -1,11 +1,13 @@
 /* Light and Dark Modes */
 body {
-    --bg: #E4E4FF;
+    --bg: #72C4DA;
     --textNormal: #222;
     --yellow: #FFD301;
     --navItem: var(--dark);
     --navHover: rgba(52, 58, 64, 0.88);
     --storyModal: var(--dark);
+    --link: #424284;
+    --hover: #33315E;
   
     background-color: var(--bg);
     color: var(--textNormal);
@@ -21,8 +23,20 @@ body.dark {
     --textNormal: rgba(255, 255, 255, 1);
     --navItem: #fff;
     --navHover: rgba(255, 255, 255, 0.88);
+    --link: #FFD301;
+    --hover: #F5C300;
 
     transition: all 0.25s linear;
+}
+
+a {
+    font-weight: bold;
+    color: var(--link);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--hover);
 }
 
 /* dark mode toggler */
@@ -37,6 +51,23 @@ body.dark {
 
 .dark .toggle-switch:after {
     content: "🌞";
+}
+
+.alt-toggle {
+    background: var(--yellow);
+    padding: 10px 20px;
+    font-weight: bold;
+    color: var(--dark);
+    border-radius: 5px;
+    font-size: smaller;
+}
+
+.alt-toggle:after {
+    content: "Dark Mode";
+}
+
+.dark .alt-toggle:after {
+    content: "Light Mode";
 }
 
 .checkbox {
@@ -54,12 +85,21 @@ body.dark {
     color: rgba(52, 58, 64, 0.88) !important;
 }
 
-.nav-item .active {
+.nav-item .active, .menu-button {
     background-color: var(--yellow) !important;
     color: var(--dark) !important;
 }
 
-.nav-item .active:hover {
+.menu-button {
+    border: none;
+}
+
+.menu-button:hover {
+    border: none;
+    box-shadow: none;
+}
+
+.nav-item .active:hover, .menu-button:hover {
     background-color: var(--yellow) !important;
     color: rgba(52, 58, 64, 0.88) !important;
 }
