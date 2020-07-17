@@ -46,7 +46,7 @@ export default () => (
       <Container>
       <Row className="justify-content-between justify-content-lg-end">
       <Col xs={4} className="d-lg-none">
-      <Img fluid={data.title.childImageSharp.fluid} />
+      <a href="/" aria-label="Back to Home"><Img fluid={data.title.childImageSharp.fluid} /></a>
       </Col>
       <Col xs={5} className="text-right">
       <DarkMode />
