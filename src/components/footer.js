@@ -14,7 +14,10 @@ export default () => (
                     <div className="form-group d-none">
                     <label>Don’t fill this out if you're human:<input name="bot-field" /></label>
                     </div>
-                    <div className="form-group">
+
+                    {/* original */}
+
+                    {/* <div className="form-group">
                         <div id="nameId" className="sr-only">Your Name</div>
                         <input type="text" className="form-control" name="Name" placeholder="Your Name" />
                     </div>
@@ -25,7 +28,21 @@ export default () => (
                     <div className="form-group">
                         <div id="messageId" className="sr-only">Message</div>
                         <textarea type="text" className="form-control" name="Message" rows="5" placeholder="Message"></textarea>
+                    </div> */}
+
+                    <div className="form-group">
+                        <input id="name" type="text" className="form-control" name="Name" placeholder="Your Name" />
+                        <label htmlFor="name" className="sr-only">Your name</label>
                     </div>
+                    <div className="form-group">
+                        <input id="email" type="email" className="form-control" name="Email" placeholder="Your Email" />
+                        <label htmlFor="email" className="sr-only">Your email</label>
+                    </div>
+                    <div className="form-group">
+                        <textarea id="message" type="text" className="form-control" name="Message" rows="5" placeholder="Message"></textarea>
+                        <label htmlFor="message" className="sr-only">Your message</label>
+                    </div>
+
                     <button type="submit" className="btn btn-danger">Send</button>
                 </form>
             </Col>
