@@ -113,5 +113,11 @@ module.exports = {
         pageTransitionDelay: 0,
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '241074406832514',
+      },
+    },
   ],
 }
